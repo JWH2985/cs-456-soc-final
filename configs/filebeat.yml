@@ -1,0 +1,28 @@
+# Filebeat configuration for victim-ubuntu
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/auth.log
+  fields:
+    log_type: ssh_auth
+    host: victim-ubuntu
+
+# Send output to Kafka
+output.kafka:
+  hosts: ["10.0.1.4:9092"]
+  topic: 'ssh-logs'
+  partition.round_robin:
+    reachable_only: false
+  required_acks: 1
+  compression: gzip
+  max_message_bytes: 1000000
+
+# Logging
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644
