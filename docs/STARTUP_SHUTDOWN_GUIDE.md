@@ -11,7 +11,6 @@
 - **URL:** `http://[ELASTIC-NODE-EXTERNAL-IP]:5601`
   - *Note: IP changes every time VMs restart (see "Get Current IPs" below)*
 - **Username:** `elastic`
-- **Password:** `EsWdmp_QKR=NJzO4jDVU`
 
 ### GCP Project
 - **Project ID:** `cs456-soc-final`
@@ -78,7 +77,7 @@ exit
 
 **Open Kibana:**
 - Navigate to: `http://[ELASTIC-NODE-EXTERNAL-IP]:5601`
-- Login with credentials above
+- Login
 - You should see the Kibana home screen
 
 ✅ **All systems ready!**
@@ -150,7 +149,7 @@ exit
 2. Click hamburger menu (☰) → **Analytics** → **Dashboard**
 3. Select:
    - **"Phase 1: SSH Brute Force Attack"** (Jon's dashboard)
-   - **Phase 2 dashboards** (if created by Nareg)
+   - **Phase 2 dashboards**
 
 ### Search Raw Events
 
