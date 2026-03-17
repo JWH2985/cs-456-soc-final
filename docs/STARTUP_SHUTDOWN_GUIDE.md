@@ -35,7 +35,7 @@ gcloud config set project cs456-soc-final
 
 ```bash
 gcloud compute instances start elastic-node logstash-node kafka-node \
-  victim-ubuntu victim-windows --zone=us-central1-a
+  victim-ubuntu victim-windows-np --zone=us-central1-a
 ```
 
 ⏱️ **Wait 2-3 minutes** for VMs to fully boot.
@@ -175,7 +175,7 @@ Running VMs cost money. Always stop them when not actively working.
 
 ```bash
 gcloud compute instances stop elastic-node logstash-node kafka-node \
-  victim-ubuntu victim-windows --zone=us-central1-a
+  victim-ubuntu victim-windows-np --zone=us-central1-a
 ```
 
 **Confirm all VMs stopped:**
